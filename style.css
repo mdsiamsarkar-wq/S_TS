@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DARK MODE BODY */
+body.dark {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+}
+
+.app {
+  width: 95%;
+  max-width: 900px;
+  height: 90vh;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+body.dark .app {
+  background: #1f1f2e;
+  color: #f1f1f1;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-btn {
+  background: transparent;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+body.dark input {
+  background: #2a2a3d;
+  border: 1px solid #444;
+  color: white;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#taskList {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+}
+
+li {
+  background: #f7f8fc;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark li {
+  background: #2a2a3d;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+body.dark .done {
+  color: #888;
+}
+
+.actions button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+}

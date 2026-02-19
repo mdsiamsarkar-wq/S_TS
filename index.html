@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Shared Task</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <header>
+      <div class="header-top">
+        <h1>✨ Live Shared Task Board</h1>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </div>
+
+      <div class="stats">
+        <span>Total: <strong id="totalCount">0</strong></span>
+        <span>Completed: <strong id="doneCount">0</strong></span>
+        <span>Remaining: <strong id="remainingCount">0</strong></span>
+      </div>
+    </header>
+
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="What needs to be done today?">
+      <button id="addBtn">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
