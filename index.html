@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Shared Task</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <div class="app">
-
+  <div class="app" id="appContainer">
     <header>
       <div class="header-top">
-        <h1>✨Our Shared Task</h1>
+        <h1>✨ Our Shared Task</h1>
         <button id="themeToggle" class="theme-btn">🌙</button>
       </div>
 
@@ -24,14 +27,45 @@
 
     <div class="input-section">
       <input type="text" id="taskInput" placeholder="What needs to be done today?">
+      <select id="taskCategory">
+        <option value="simi">Simi</option>
+        <option value="siam">Siam</option>
+        <option value="together">Together</option>
+      </select>
       <button id="addBtn">Add Task</button>
     </div>
 
-    <ul id="taskList"></ul>
+    <div class="sections-container">
+      <div class="task-section" data-category="simi">
+        <h2>🙋‍♀️ Simi</h2>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-simi"></div>
+        </div>
+        <p class="section-stats" id="stats-simi">0 / 0 Completed</p>
+        <ul id="list-simi" class="droppable-list"></ul>
+      </div>
 
+      <div class="task-section" data-category="siam">
+        <h2>🙋‍♂️ Siam</h2>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-siam"></div>
+        </div>
+        <p class="section-stats" id="stats-siam">0 / 0 Completed</p>
+        <ul id="list-siam" class="droppable-list"></ul>
+      </div>
+
+      <div class="task-section" data-category="together">
+        <h2>🤝 Together</h2>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-together"></div>
+        </div>
+        <p class="section-stats" id="stats-together">0 / 0 Completed</p>
+        <ul id="list-together" class="droppable-list"></ul>
+      </div>
+    </div>
   </div>
 
   <script type="module" src="script.js"></script>
 </body>
-</html>
 
+</html>
